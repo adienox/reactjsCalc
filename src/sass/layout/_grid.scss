@@ -1,0 +1,76 @@
+@use '../util/' as u;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(u.rem(200), auto) repeat(5, 6rem);
+
+    width: fit-content;
+    padding: u.rem(19);
+    margin-top: 2rem;
+    margin-inline: auto;
+
+    border-radius: u.rem(18);
+    background: u.$calculator-background;
+    backdrop-filter: blur(25px);
+
+    &__output {
+        grid-column: 1 / -1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+
+        padding: 0.75rem;
+        word-wrap: break-word;
+        word-break: break-all;
+
+        .previousOperand {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: u.rem(37);
+            margin-bottom: u.rem(13);
+        }
+
+        .currentOperand {
+            color: white;
+            font-size: u.rem(106);
+            margin-bottom: u.rem(35);
+        }
+    }
+
+    & > button {
+        cursor: pointer;
+
+        color: u.$text;
+        font-size: u.rem(36);
+        background: u.$button-background;
+        box-shadow: 0px 1px 50px rgba(0, 0, 0, 0.25);
+
+        border-radius: u.rem(16);
+        border: none;
+        outline: none;
+
+        margin: u.rem(8);
+        padding: u.rem(16);
+
+        &:hover,
+        &:focus {
+            background: u.$button-hover-background;
+        }
+    }
+
+    #{&}__spanTwoRow {
+        grid-row: span 2;
+        background-color: u.$accent-color;
+
+        &:hover,
+        &:focus {
+            background: u.$accent-color-solid;
+        }
+    }
+
+    #{&}__spanTwoColumn {
+        grid-column: span 2;
+    }
+}

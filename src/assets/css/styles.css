@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  background: linear-gradient(to right, #00aaff, #00ff6c);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(12.5rem, auto) repeat(5, 6rem);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.1875rem;
+  margin-top: 2rem;
+  margin-inline: auto;
+  border-radius: 1.125rem;
+  background: linear-gradient(168.16deg, #424242 0%, rgba(66, 66, 66, 0.4) 99.69%);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+}
+.grid__output {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.grid__output .previousOperand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 2.3125rem;
+  margin-bottom: 0.8125rem;
+}
+.grid__output .currentOperand {
+  color: white;
+  font-size: 6.625rem;
+  margin-bottom: 2.1875rem;
+}
+.grid > button {
+  cursor: pointer;
+  color: white;
+  font-size: 2.25rem;
+  background: rgba(78, 78, 78, 0.75);
+  box-shadow: 0px 1px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  margin: 0.5rem;
+  padding: 1rem;
+}
+.grid > button:hover, .grid > button:focus {
+  background: #4e4e4e;
+}
+.grid .grid__spanTwoRow {
+  grid-row: span 2;
+  background-color: rgba(86, 203, 149, 0.75);
+}
+.grid .grid__spanTwoRow:hover, .grid .grid__spanTwoRow:focus {
+  background: #56cb95;
+}
+.grid .grid__spanTwoColumn {
+  grid-column: span 2;
+}/*# sourceMappingURL=styles.css.map */

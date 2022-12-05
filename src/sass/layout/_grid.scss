@@ -4,15 +4,25 @@
     display: grid;
     grid-template-columns: repeat(4, 6rem);
     grid-template-rows: minmax(u.rem(200), auto) repeat(5, 6rem);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
-    width: fit-content;
     padding: u.rem(19);
-    margin-top: 2rem;
     margin-inline: auto;
+    justify-content: center;
 
-    border-radius: u.rem(18);
     background: u.$calculator-background;
     backdrop-filter: blur(25px);
+
+    @include u.breakpoint(medium) {
+        position: relative;
+        margin-top: 2rem;
+        width: fit-content;
+        border-radius: u.rem(18);
+    }
 
     &__output {
         grid-column: 1 / -1;

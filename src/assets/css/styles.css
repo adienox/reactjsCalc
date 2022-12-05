@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 body {
@@ -27,16 +28,27 @@ a:visited {
   display: grid;
   grid-template-columns: repeat(4, 6rem);
   grid-template-rows: minmax(12.5rem, auto) repeat(5, 6rem);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 1.1875rem;
-  margin-top: 2rem;
   margin-inline: auto;
-  border-radius: 1.125rem;
+  justify-content: center;
   background: linear-gradient(168.16deg, #424242 0%, rgba(66, 66, 66, 0.4) 99.69%);
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
+}
+@media (min-width: 43.75em) {
+  .grid {
+    position: relative;
+    margin-top: 2rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 1.125rem;
+  }
 }
 .grid__output {
   grid-column: 1/-1;

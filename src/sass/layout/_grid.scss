@@ -19,7 +19,8 @@
 
     @include u.breakpoint(medium) {
         position: relative;
-        margin: 2rem 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         width: fit-content;
         border-radius: u.rem(18);
     }

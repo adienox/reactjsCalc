@@ -1,6 +1,7 @@
 # My Awesome Project
+![calculatorDesktop](https://user-images.githubusercontent.com/95954371/207591582-356b788c-e034-4c77-86fb-5116688f6e2f.png)
 
-Welcome to my awesome project! This project is a simple calculator app that I built to showcase my skills in React JS, Sass, and BEM. The app is responsive and can adapt to any screen size, making it easy to use on any device.
+This project is a simple calculator app that I built to showcase my skills in React JS, Sass, and BEM. The app is responsive and can adapt to any screen size, making it easy to use on any device.
 
 ## Skills Learned
 
